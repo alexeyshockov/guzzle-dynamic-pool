@@ -1,0 +1,33 @@
+{
+    "name":        "alexeyshockov/guzzle-dynamic-pool",
+    "type":        "library",
+    "description": "A small helper to use dynamic request pools in Guzzle",
+    "keywords":    ["http", "guzzle"],
+    "homepage":    "http://github.com/alexeyshockov/guzzle-dynamic-pool",
+    "license":     "MIT",
+    "support":     {
+        "issues": "https://github.com/alexeyshockov/guzzle-dynamic-pool/issues"
+    },
+    "authors": [
+        {
+            "name":     "Alexey Shokov",
+            "email":    "alexey@shockov.com",
+            "homepage": "http://alexey.shockov.com/"
+        }
+    ],
+    "require": {
+        "php": "~5.6 || ~7.0",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "AlexS\\GuzzleDynamicPool\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    }
+}
