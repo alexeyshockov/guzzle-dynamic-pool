@@ -20,8 +20,8 @@
         "guzzlehttp/guzzle": "~6.0"
     },
     "require-dev": {
-        "symfony/dom-crawler": "~4.0",
-        "danielstjules/Stringy": "~3.0"
+        "symfony/dom-crawler": "~4.0 || ~5.0",
+        "danielstjules/stringy": "~3.0"
     },
     "autoload": {
         "psr-4": {

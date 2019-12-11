@@ -2,6 +2,8 @@
 
 namespace AlexS\GuzzleDynamicPool;
 
+use ArrayIterator;
+
 /**
  * @internal
  */
@@ -9,12 +11,12 @@ namespace AlexS\GuzzleDynamicPool;
 class MapIterator implements \Iterator
 {
     /**
-     * @var \Iterator
+     * @var ArrayIterator
      */
     private $inner;
     private $handler;
 
-    public function __construct(\Iterator $inner, callable $handler)
+    public function __construct(ArrayIterator $inner, callable $handler)
     {
         $this->inner = $inner;
         $this->handler = $handler;
@@ -22,6 +24,10 @@ class MapIterator implements \Iterator
 
     public function next()
     {
+        // Cleanup current (processed) entry. We cannot unset completely, unfortunately, because then indexing will be
+        // broken (and the whole execution will be broken).
+        $this->valid() && $this->inner->offsetSet($this->inner->key(), null);
+
         $this->inner->next();
     }
 
