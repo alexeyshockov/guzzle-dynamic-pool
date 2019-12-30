@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": "~7.2",
-        "guzzlehttp/guzzle": "~6.3 || ~7.0 || 7.0.x-dev"
+        "guzzlehttp/guzzle": "~6.3 || ~7.0"
     },
     "require-dev": {
         "symfony/dom-crawler": "~4 || ~5",
